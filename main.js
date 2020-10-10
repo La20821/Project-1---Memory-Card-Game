@@ -28,7 +28,7 @@ function gamePlay(event) {
  
 cards.forEach(cards => {
     cards.addEventListener('click', function() {
-        console.log(`${cardsArray} clicked`)
+        console.log('card clicked')
     });
 });
 
