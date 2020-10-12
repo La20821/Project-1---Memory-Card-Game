@@ -5,7 +5,11 @@ const timeCount = document.querySelector('.Timer');
 const score = document.querySelector('.scoreKeep');
 const allFlipCards = document.querySelector('.allFlipCards');
 const cards = document.querySelectorAll('.cards');
+const message = document.querySelector('#message');
+let counter = 0;
 
+let allCards = [cards];
+let frontImgs = ['https://i.imgur.com/XobARy9.jpg', 'https://i.imgur.com/t6oDW49.png', 'https://i.imgur.com/VUcWfaz.jpg', 'https://i.imgur.com/44TVmCD.jpg', 'https://i.imgur.com/PnkjjUV.png']
 
 
 let hasClickedCard = false;
@@ -15,13 +19,17 @@ let firstClick, secondClick;
 
 cards.forEach(cards => {
     cards.addEventListener('click', gamePlay);
-}); 
+}); // shows output every time a card is clicked//
 
 
 // start game here by clicking card//
 function gamePlay() {
     this.classList.toggle('visible');
-
+    let img = this.lastElementChild.lastElementChild;
+    console.log(img.src);
+    img.src = frontImgs[this.id]
+    
+    
     if(!hasClickedCard) {
         hasClickedCard = true;
         firstClick= this;
@@ -33,13 +41,38 @@ function gamePlay() {
         console.log(firstClick.id)
         if (firstClick.id == secondClick.id) {
         console.log('Its a match!') 
+        counter++;
+        console.log(counter);
+        message.innerHTML = 'YOU FOUND A MATCH!' // alert("You found a match!")
             firstClick.removeEventListener('click', gamePlay);
             secondClick.removeEventListener('click', gamePlay);
-        }
-    }   
+        } //If match, then card cannot be clicked again.
+        winLogic();
+    }   setTimeout(removeInnerHTML, 4000);
+
    
 }
 
+function removeInnerHTML() {
+    message.innerHTML = ''; 
+    
+}
+// iDs = this;
+
+
+function winLogic() {
+    if (counter == 5)
+    console.log('You win')
+}
+
+// function countDown() {
+//     if(hasClickedCard !== true) {
+//         timeCount = setInterval(function () {}
+            
+
+// ("cards").on('click', function() {
+//     countDown();
+// });
 
 // This event listener is activated every time a card is clicked by user//
 // I will also want to replace "function" with the actual name of the function I create//
@@ -72,15 +105,15 @@ function gamePlay() {
 
 
 // let cardTwo = document.getElementById('1');
-let cardThree = document.getElementById('2');
-console.log(cardThree);
-let cardFour = document.getElementById('3');
-let cardFive = document.getElementById('4');
-let cardSix = document.getElementById('5');
-let cardSeven = document.getElementById('6');
-let cardEight = document.getElementById('7');
-let cardNine = document.getElementById('8');
-let cardTen = document.getElementById('9');
+// let cardThree = document.getElementById('2');
+// console.log(cardThree);
+// let cardFour = document.getElementById('3');
+// let cardFive = document.getElementById('4');
+// let cardSix = document.getElementById('5');
+// let cardSeven = document.getElementById('6');
+// let cardEight = document.getElementById('7');
+// let cardNine = document.getElementById('8');
+// let cardTen = document.getElementById('9');
 
 let cardsArray = [cards]; //This array should hold all the cards//
    
