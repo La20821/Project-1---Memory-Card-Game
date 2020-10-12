@@ -1,38 +1,49 @@
+
 h1 {
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Pinyon Script', cursive;
 
 }
 
 .Timer {
     text-align: right; 
     float: right;
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .scoreKeep {
     text-align: left;
     float: left;
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
     width: 600px;
     margin: auto;
-    background: radial-gradient(rgb(248, 208, 134), rgb(155, 98, 108));
+    background: radial-gradient(rgb(224, 171, 183), rgb(155, 98, 108));
 }
 
 .cards {
     background-color: black;
-    height: 175px;
+    height: 100px;
     width: 120px;
-    border: 1px solid yellow;
+    border: 1px solid grey;
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
-    
-    
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .5s;
 
+}
+.cards.visible {
+    transform: rotateY(180deg);
+}
+
+.cards:hover {
+    box-shadow: inset 0px 0px 0px 1px grey;
+    box-sizing:  border-box;
+    border: 1px solid grey;
 }
 
 .allFlipCards {
@@ -41,7 +52,8 @@ body {
     height: 400px;
     width: 700px;
     justify-content: space-between;
-    
+    perspective: 1000px;
+}
     
 
     /* grid-template-columns: repeat(4, auto); */
@@ -51,4 +63,14 @@ body {
     grid-template-columns: 150px 150px 150px 150px;
     grid-template-rows: 150px 150px 150px 150px; */
     
-}
+ img {
+     border-radius: 10px;
+     max-height: 100%;
+     max-width: 100%;
+     object-fit: fill;
+     border: grey;
+
+ }
+
+ 
+ 
