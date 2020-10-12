@@ -72,5 +72,10 @@ body {
 
  }
 
+ /* .backImage {
+     backface-visibility: hidden;
+ } */
  
- 
+ .card-front {
+     transform: rotateY(180deg);
+ }
