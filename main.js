@@ -6,12 +6,16 @@ let score = document.querySelector('.scoreKeep');
 const allFlipCards = document.querySelector('.allFlipCards');
 const cards = document.querySelectorAll('.cards');
 const message = document.querySelector('#message');
-let counter = 0;
+const message1 = document.querySelector('#message1');
+const resetBtn = document.querySelector('#reset');
+let count = 0;
 let scoreCount = 0;
+
+
 
 let allCards = [cards];
 let frontImgs = ['https://i.imgur.com/XobARy9.jpg', 'https://i.imgur.com/t6oDW49.png', 'https://i.imgur.com/VUcWfaz.jpg', 'https://i.imgur.com/44TVmCD.jpg', 'https://i.imgur.com/PnkjjUV.png']
-let backImage = ['https://i.imgur.com/ZcDpBFV.png'];
+let backImage = 'https://i.imgur.com/ZcDpBFV.png';
 
 let hasClickedCard = false;
 let firstClick, secondClick;
@@ -42,25 +46,34 @@ function gamePlay() {
         console.log(firstClick.id)
         if (firstClick.id == secondClick.id) {
         console.log('Its a match!') 
-        counter++;
-        console.log(counter);
+        count++;
+        console.log(count);
         message.innerHTML = 'YOU FOUND A MATCH!' // alert("You found a match!")
             firstClick.removeEventListener('click', gamePlay);
             secondClick.removeEventListener('click', gamePlay);
             score = scoreCount +=250;
-            document.querySelector('.scoreKeep').innerHTML;
+            score.innerHTML = scoreCount;
             console.log(score)
         } //If match, then card cannot be clicked again. 
         else { 
             //if not a match//
             console.log("Not a match!")
             setTimeout(() => {
+                let origImg = firstClick.lastElementChild.lastElementChild;
+                let origImg2 = secondClick.lastElementChild.lastElementChild;
+                console.log(origImg.src);
+                origImg.src = backImage;
+                origImg2.src = backImage;
+                console.log(firstClick);
             firstClick.classList.remove('click','visible')
             secondClick.classList.remove('click','visible')
             }, 1000);
-            let img = this.firstChild;
-            console.log(img.src);
-            img.src = backImage
+            // let origImg = firstClick.lastElementChild.lastElementChild;
+            // let origImg2 = secondClick.lastElementChild.lastElementChild;
+            // console.log(origImg.src);
+            // origImg.src = backImage;
+            // origImg2.src = backImage;
+            // console.log(firstClick)
 
         }
         winLogic();
@@ -77,17 +90,39 @@ function removeInnerHTML() {
 
 
 function winLogic() {
-    if (counter == 5)
-    console.log('You win')
+    if (count == 5)
+    message1.innerHTML = "You've Won!"
+    // console.log('You win')
 }
-
 
 function resetGame() {
-    [hasClickedCard, lockGame] = [false, false];
+
 }
+
+let counter = 60;
+
+setInterval(() => {
+    counter--;
+    if(counter >= 0) {
+        id = document.getElementById('time-left');
+        id.innerHTML = counter;
+    }
+    
+}, 1000);
+
+console.log(counter)
+
+
+// function resetGame() {
+//     [hasClickedCard, lockGame] = [false, false];
+// }
+
 // function countDown() {
-//     if(hasClickedCard !== true) {
-//         timeCount = setInterval(function () {}
+//     // if(!hasClickedCard == false) {
+//         timeCount = setInterval(gamePlay, 5000) 
+//             console.log('Timer works!'); 
+//         }
+    // }
             
 
 // ("cards").on('click', function() {
@@ -135,7 +170,7 @@ function resetGame() {
 // let cardNine = document.getElementById('8');
 // let cardTen = document.getElementById('9');
 
-let cardsArray = [cards]; //This array should hold all the cards//
+// let cardsArray = [cards]; //This array should hold all the cards//
    
 
 

@@ -33,19 +33,21 @@ body {
     width: 500px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
+    outline: none;
     
     
 }
 
  .cards {
-    background-color: black;
+    /* background-color: black; */
     border-radius: 10px;
     background-size: auto;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     position: relative;
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform .5s;
+    outline: none;
 
 }
 
@@ -54,9 +56,8 @@ body {
 }
 
 .cards:hover {
-    box-shadow: inset 0px 0px 0px 1px grey;
+    /* box-shadow: inset 0px 0px 0px 1px; */
     box-sizing:  border-box;
-    border: 1px solid grey;
 }
 
 
@@ -70,11 +71,12 @@ body {
     grid-template-rows: 150px 150px 150px 150px; */
     
  img {
-     border-radius: 10px;
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-     border: grey;
+    
+    border-radius: 10px;
+    height: 200%;
+    width: 100%;
+    object-fit: cover;
+    border: grey;
 
  }
 
