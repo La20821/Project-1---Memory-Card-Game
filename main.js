@@ -34,13 +34,23 @@ function gamePlay() {
     console.log(img.src);
     img.src = frontImgs[this.id]
     
-    
+    if (hasClickedCard) {
+        setInterval(() => {
+            counter--;
+            if(counter >= 0) {
+                id = document.getElementById('time-left');
+                id.innerHTML = counter;
+            }
+            
+        }, 1000);
+    }
     if(!hasClickedCard) {
         hasClickedCard = true;
         firstClick= this;
     } else {
         hasClickedCard = false;
         secondClick = this;
+        
 
         console.log({firstClick, secondClick});
         console.log(firstClick.id)
@@ -51,8 +61,8 @@ function gamePlay() {
         message.innerHTML = 'YOU FOUND A MATCH!' // alert("You found a match!")
             firstClick.removeEventListener('click', gamePlay);
             secondClick.removeEventListener('click', gamePlay);
-            score = scoreCount +=250;
-            score.innerHTML = scoreCount;
+            scoreCount +=250;
+            score.innerHTML = "Score:" + scoreCount;
             console.log(score)
         } //If match, then card cannot be clicked again. 
         else { 
@@ -101,14 +111,16 @@ function resetGame() {
 
 let counter = 60;
 
-setInterval(() => {
-    counter--;
-    if(counter >= 0) {
-        id = document.getElementById('time-left');
-        id.innerHTML = counter;
-    }
+
+
+// setInterval(() => {
+//     counter--;
+//     if(counter >= 0) {
+//         id = document.getElementById('time-left');
+//         id.innerHTML = counter;
+//     }
     
-}, 1000);
+// }, 1000);
 
 console.log(counter)
 
@@ -117,12 +129,6 @@ console.log(counter)
 //     [hasClickedCard, lockGame] = [false, false];
 // }
 
-// function countDown() {
-//     // if(!hasClickedCard == false) {
-//         timeCount = setInterval(gamePlay, 5000) 
-//             console.log('Timer works!'); 
-//         }
-    // }
             
 
 // ("cards").on('click', function() {
