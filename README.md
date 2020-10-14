@@ -14,3 +14,20 @@ As I'm sure you know, web development has a lot to do with collaboration. Althou
 * Command Line Terminal
 * Google Chrome Web Browser & Developer Tools
 * Wireframe Design Tool
+## Game Win Logic
+Player has 1 minute to match all cards by clicking each one. If player wins a match, cards stay flipped on the matched side. If players click two cards that aren't a match, both cards will flip back to back side. Player can continue to look for matches until all matches are found. 
+## General Requirements Met
+1) Preload app with data.
+2) Let player click freely through cards.
+3) Mark if player gets a match.
+4) Re-display incorrectly matched cards until user gets them correct. 
+
+**Bonus**
+
+1) Track score
+2) Include images on one or both sides
+3) Set Timer
+
+##Game Link
+file:///Users/lp20821/sei/projects/Project-1---Memory-Card-Game/index.html
+
