@@ -29,7 +29,7 @@ Player has 1 minute to match all cards by clicking each one. If player wins a ma
 3) Set Timer
 
 ## Game Link
-file:///Users/lp20821/sei/projects/Project-1---Memory-Card-Game/index.html
+[Title] (file:///Users/lp20821/sei/projects/Project-1---Memory-Card-Game/index.html)
 
 ## What's Next?
 There's definitely room for opportunity for refactoring in my code.  The main goal was get game working and I ran into a lot of issues where code segments would not work outside of my main Game function code. I would also like to add sound to each card. A rotation of 3 main sound effects. A click sound on each card, a sound when player gets a match, and a sound if the second clicked card is not a match. I also ran into some brick walls with my CSS as far as card styling, that would be something I revisit. 
