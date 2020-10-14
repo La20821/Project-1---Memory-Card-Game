@@ -24,7 +24,7 @@ let firstClick, secondClick;
 
 cards.forEach(cards => {
     cards.addEventListener('click', gamePlay);
-}); // shows output every time a card is clicked//
+}); // system knows every time a card is clicked//
 
 
 // start game here by clicking card//
@@ -42,7 +42,7 @@ function gamePlay() {
                 id.innerHTML = counter;
             }
             
-        }, 1000);
+        }, 1000);//The timer starts directly when second card is clicked.//
     }
     if(!hasClickedCard) {
         hasClickedCard = true;
@@ -54,7 +54,7 @@ function gamePlay() {
 
         console.log({firstClick, secondClick});
         console.log(firstClick.id)
-        if (firstClick.id == secondClick.id) {
+        if (firstClick.id == secondClick.id) {//looks at the div id of each card and verifies its equal//
         console.log('Its a match!') 
         count++;
         console.log(count);
@@ -64,7 +64,7 @@ function gamePlay() {
             scoreCount +=250;
             score.innerHTML = "Score:" + scoreCount;
             console.log(score)
-        } //If match, then card cannot be clicked again. 
+        } //If match, then cards cannot be clicked again. 
         else { 
             //if not a match//
             console.log("Not a match!")
@@ -78,12 +78,7 @@ function gamePlay() {
             firstClick.classList.remove('click','visible')
             secondClick.classList.remove('click','visible')
             }, 1000);
-            // let origImg = firstClick.lastElementChild.lastElementChild;
-            // let origImg2 = secondClick.lastElementChild.lastElementChild;
-            // console.log(origImg.src);
-            // origImg.src = backImage;
-            // origImg2.src = backImage;
-            // console.log(firstClick)
+            
 
         }
         winLogic();
@@ -113,14 +108,6 @@ let counter = 60;
 
 
 
-// setInterval(() => {
-//     counter--;
-//     if(counter >= 0) {
-//         id = document.getElementById('time-left');
-//         id.innerHTML = counter;
-//     }
-    
-// }, 1000);
 
 console.log(counter)
 
@@ -131,77 +118,3 @@ console.log(counter)
 
             
 
-// ("cards").on('click', function() {
-//     countDown();
-// });
-
-// This event listener is activated every time a card is clicked by user//
-// I will also want to replace "function" with the actual name of the function I create//
-
-
-
-
-
-// const numbers = '0123456789';
-// let numbersArray = Array.from(numbers);
-// console.log(numbersArray);
-
-// numbersArray.forEach(number => {
-//     console.log(numbersArray)
-    // gamePlay.addEventListener('click');
-    // console.log('it works')
-   
-// });
-
-// let allNumbers = math.floor(math.random()*numbers.length);
-// console.log(allNumbers);
-
-
-
-// let cardOne = document.getElementById('0');
-// function matchOne () {
-//     cardOne.addEventListener('click', gamePlay) 
-// }  
-
-
-
-// let cardTwo = document.getElementById('1');
-// let cardThree = document.getElementById('2');
-// console.log(cardThree);
-// let cardFour = document.getElementById('3');
-// let cardFive = document.getElementById('4');
-// let cardSix = document.getElementById('5');
-// let cardSeven = document.getElementById('6');
-// let cardEight = document.getElementById('7');
-// let cardNine = document.getElementById('8');
-// let cardTen = document.getElementById('9');
-
-// let cardsArray = [cards]; //This array should hold all the cards//
-   
-
-
-
- 
-
-
-// let cardsToFlip = [];
-
-// let cardOne = cardsArray[0,1];
-// cardsToFlip.push(cardOne);
-// console.log('player clicked');
-
-// for (let i =0; i < cardsToFlip.length; i++) {
-//     let allcards = document.createElement
-// }
-
-// class gameSetup {
-//     constructor(totalTime, cards) {
-//         this.cards = cards;
-//         this.totalTime = totalTime;
-//         this.timeLeft = totalTime;
-//         this.timer = document.getElementById('time-left');
-//     }
-//     gameStart() {
-
-//     }
-// }

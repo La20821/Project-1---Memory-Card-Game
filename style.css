@@ -63,12 +63,6 @@ body {
 
     
 
-    /* grid-template-columns: repeat(4, auto); */
-
-    /* border: 2px solid red;
-    display: grid;
-    grid-template-columns: 150px 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px 150px; */
     
  img {
     
@@ -80,10 +74,4 @@ body {
 
  }
 
- /* .backImage {
-     backface-visibility: hidden;
- } */
  
- /* .card-front {
-     transform: rotateY(180deg);
- } */
