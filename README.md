@@ -8,7 +8,7 @@ The purpose was to develop a working card game where the user is able to click o
 ### Brief Collaboration
 As I'm sure you know, web development has a lot to do with collaboration. Although this was an individual assignment, it was important to have a brief conversation with someone more exprienced just to discuss the groundwork for project, layout, and whats most important to start with. Here is where it was confirmed to start on the basic coding and game logic before spending time and effort on the CSS. I know how tempting it can be to want to get your web page looking beautiful, but what good is a game that looks great, but has no functionality? 
 ## Technology Used
-* Visual Studio Code(HTML5, CSS, and Javascript)
+* Visual Studio Code(HTML5, CSS3, and Javascript ES6)
 * Google stored images
 * Imgur Photo Sharing
 * Command Line Terminal
@@ -24,10 +24,13 @@ Player has 1 minute to match all cards by clicking each one. If player wins a ma
 
 **Bonus**
 
-1) Track score
+1) Track score(not over time)
 2) Include images on one or both sides
 3) Set Timer
 
-##Game Link
+## Game Link
 file:///Users/lp20821/sei/projects/Project-1---Memory-Card-Game/index.html
+
+## What's Next?
+There's definitely room for opportunity for refactoring in my code.  The main goal was get game working and I ran into a lot of issues where code segments would not work outside of my main Game function code. I would also like to add sound to each card. A rotation of 3 main sound effects. A click sound on each card, a sound when player gets a match, and a sound if the second clicked card is not a match. I also ran into some brick walls with my CSS as far as card styling, that would be something I revisit. 
 
