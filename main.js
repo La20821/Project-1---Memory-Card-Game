@@ -118,3 +118,8 @@ console.log(counter)
 
             
 
+// function playSound() {
+//     let a = newAudio('https://soundcloud.com/jack-adams-vlogs-gaming/chris-brown-young-thug-go-crazy-official-instrumental#t=0:10');
+//     a.play();
+// }
+
